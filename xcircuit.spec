@@ -13,6 +13,7 @@ Source0:	http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/%{name}-%{versio
 URL:		http://bach.ece.jhu.edu/~tim/programs/xcircuit/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	tk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_xcircuitdir	%{_prefix}/lib/%{name}-3.2
