@@ -1,9 +1,9 @@
 # TODO:
-# - pl-translation, icon and desktop
+# - pl-translation and desktop
 Summary:	Drawing electrical circuit schematic diagrams and related figure
 Name:		xcircuit
 Version:	3.1.38
-Release:	0.1
+Release:	0.9
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/%{name}-%{version}.tgz
@@ -38,9 +38,12 @@ schematic capture.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+
+install lib/pixmaps/%{name}.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,5 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_xcircuitdir}/fonts/*.lps
 %{_xcircuitdir}/fonts/*.xfe
 #%{_desktopdir}/*.desktop
-#%{_pixmapsdir}/*
+%{_pixmapsdir}/*
 %{_mandir}/man1/*.1*
