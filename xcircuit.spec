@@ -15,7 +15,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_xcircuitdir	%{_libdir}/%{name}-3.1
+%define		_xcircuitdir	%{_prefix}/lib/%{name}-3.1
 
 %description
 XCircuit is a UNIX/X11 program for drawing publishable-quality
