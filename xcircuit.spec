@@ -1,6 +1,8 @@
 # TODO:
-# - pl-translation and desktop
+# - desktop
+# - BRs or Rs (X at least...)
 Summary:	Drawing electrical circuit schematic diagrams and related figure
+Summary(pl):	Rysowanie schematów elektronicznych i zbli¿onych diagramów
 Name:		xcircuit
 Version:	3.1.38
 Release:	0.9
@@ -25,6 +27,18 @@ are saved in and retrieved from libraries which are fully editable.
 XCircuit does not separate artistic expression from circuit drawing;
 it maintains flexiblity in style without compromising the power of
 schematic capture.
+
+%description -l pl
+XCircuit to program dla systemu UNIX/X11 do rysowania w jako¶ci
+nadaj±cej siê do publikacji ró¿nych schematów elektronicznych i
+zbli¿onych diagramów oraz tworzenia list po³±czeñ poprzez odczytanie
+schematu. XCurcuit traktuje obwody jako nieod³±cznie hierarchiczne i
+zapisuje zarówno hierarchiczne wyj¶cie w PostScripcie, jak i
+hierarchiczne listy po³±czeñ SPICE. Sk³adniki obwodów s± zapisywane i
+odczytywane z bibliotek, które s± w pe³ni modyfikowalne. XCircuit nie
+oddziela wyra¿enia artystycznego od rysowania obwodów; zachowuje
+elastyczno¶æ w stylu bez kompromisów kosztem mo¿liwo¶ci odczytu
+schematu.
 
 %prep
 %setup -q
