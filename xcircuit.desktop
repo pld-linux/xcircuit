@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=xcircuit
+Comment=Drawing electrical circuit schematic
+Comment[pl]=Rysowanie schematów ektronicznych
+Icon=xcircuit.xpm
+Exec=xcircuit
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Science;
+# vi: encoding=utf-8
