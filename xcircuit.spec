@@ -1,15 +1,15 @@
 # TODO:
-# - desktop
-# - BRs or Rs (X at least...)
+# - Rs (X at least...)
 Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(pl):	Rysowanie schematów elektronicznych i zbli¿onych diagramów
 Name:		xcircuit
 Version:	3.2.18
-Release:	0.5
+Release:	0.6
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/%{name}-%{version}.tgz
 # Source0-md5:	1469794d6a2be8b2f8b1edfe49bc6158
+Source1:	%{name}.desktop
 URL:		http://bach.ece.jhu.edu/~tim/programs/xcircuit/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -53,7 +53,7 @@ schematu.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_pixmapsdir}
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -61,6 +61,7 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 	DESTDIR=$RPM_BUILD_ROOT \
 
 install lib/pixmaps/%{name}.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -83,6 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_xcircuitdir}/pixmaps
 %{_xcircuitdir}/pixmaps/*.xpm
 %{_xcircuitdir}/pixmaps/*.xbm
-#%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
 %{_mandir}/man1/*.1*
+%{_desktopdir}/%{name}.desktop
