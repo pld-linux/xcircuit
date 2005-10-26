@@ -3,20 +3,20 @@
 Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(pl):	Rysowanie schematów elektronicznych i zbli¿onych diagramów
 Name:		xcircuit
-Version:	3.2.21
+Version:	3.4.6
 Release:	0.1
 License:	GPL
 Group:		Applications/Engineering
-Source0:	http://bach.ece.jhu.edu/~tim/programs/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	a0d7794477241be9a9ffa82176c57470
+Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
+# Source0-md5:	8d24d164608afd65a7f098347141baed
 Source1:	%{name}.desktop
-URL:		http://bach.ece.jhu.edu/~tim/programs/xcircuit/
+URL:		http://opencircuitdesign.com/xcircuit/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	tk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_xcircuitdir	%{_prefix}/lib/%{name}-3.2
+%define		_xcircuitdir	%{_prefix}/lib/%{name}-3.4
 
 %description
 XCircuit is a UNIX/X11 program for drawing publishable-quality
