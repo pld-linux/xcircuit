@@ -48,7 +48,11 @@ schematu.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure  \
+%if "%{_lib}" == "lib64"
+	--enable-libsuffix=64 \
+%endif
+	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full}
 %{__make}
 
 %install
