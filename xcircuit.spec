@@ -16,7 +16,7 @@ BuildRequires:	automake
 BuildRequires:	tk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_xcircuitdir	%{_prefix}/lib/%{name}-3.4
+%define         _xcircuitdir    %{_libdir}/%{name}-3.4
 
 %description
 XCircuit is a UNIX/X11 program for drawing publishable-quality
