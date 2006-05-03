@@ -3,12 +3,12 @@
 Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(pl):	Rysowanie schematów elektronicznych i zbli¿onych diagramów
 Name:		xcircuit
-Version:	3.4.6
+Version:	3.4.21
 Release:	0.1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	8d24d164608afd65a7f098347141baed
+# Source0-md5:	940c8fa26fd13b83eaf23055277fff58
 Source1:	%{name}.desktop
 URL:		http://opencircuitdesign.com/xcircuit/
 BuildRequires:	autoconf
