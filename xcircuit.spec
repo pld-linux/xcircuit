@@ -1,7 +1,7 @@
 # TODO:
 # - Rs (X at least...)
 Summary:	Drawing electrical circuit schematic diagrams and related figure
-Summary(pl.UTF-8):   Rysowanie schematów elektronicznych i zbliżonych diagramów
+Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
 Version:	3.4.21
 Release:	0.1
