@@ -1,7 +1,7 @@
 # TODO:
 # - Rs (X at least...)
 Summary:	Drawing electrical circuit schematic diagrams and related figure
-Summary(pl):	Rysowanie schematów elektronicznych i zbli¿onych diagramów
+Summary(pl.UTF-8):   Rysowanie schematÃ³w elektronicznych i zbliÅ¼onych diagramÃ³w
 Name:		xcircuit
 Version:	3.4.21
 Release:	0.1
@@ -29,16 +29,16 @@ XCircuit does not separate artistic expression from circuit drawing;
 it maintains flexiblity in style without compromising the power of
 schematic capture.
 
-%description -l pl
-XCircuit to program dla systemu UNIX/X11 do rysowania w jako¶ci
-nadaj±cej siê do publikacji ró¿nych schematów elektronicznych i
-zbli¿onych diagramów oraz tworzenia list po³±czeñ poprzez odczytanie
-schematu. XCurcuit traktuje obwody jako nieod³±cznie hierarchiczne i
-zapisuje zarówno hierarchiczne wyj¶cie w PostScripcie, jak i
-hierarchiczne listy po³±czeñ SPICE. Sk³adniki obwodów s± zapisywane i
-odczytywane z bibliotek, które s± w pe³ni modyfikowalne. XCircuit nie
-oddziela wyra¿enia artystycznego od rysowania obwodów; zachowuje
-elastyczno¶æ w stylu bez kompromisów kosztem mo¿liwo¶ci odczytu
+%description -l pl.UTF-8
+XCircuit to program dla systemu UNIX/X11 do rysowania w jakoÅ›ci
+nadajÄ…cej siÄ™ do publikacji rÃ³Å¼nych schematÃ³w elektronicznych i
+zbliÅ¼onych diagramÃ³w oraz tworzenia list poÅ‚Ä…czeÅ„ poprzez odczytanie
+schematu. XCurcuit traktuje obwody jako nieodÅ‚Ä…cznie hierarchiczne i
+zapisuje zarÃ³wno hierarchiczne wyjÅ›cie w PostScripcie, jak i
+hierarchiczne listy poÅ‚Ä…czeÅ„ SPICE. SkÅ‚adniki obwodÃ³w sÄ… zapisywane i
+odczytywane z bibliotek, ktÃ³re sÄ… w peÅ‚ni modyfikowalne. XCircuit nie
+oddziela wyraÅ¼enia artystycznego od rysowania obwodÃ³w; zachowuje
+elastycznoÅ›Ä‡ w stylu bez kompromisÃ³w kosztem moÅ¼liwoÅ›ci odczytu
 schematu.
 
 %prep
