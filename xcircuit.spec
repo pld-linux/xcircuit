@@ -3,12 +3,12 @@
 Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
-Version:	3.4.27
-Release:	0.1
+Version:	3.6.127
+Release:	0.9
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	7b06f177807a5823476cb06e91e5e1a8
+# Source0-md5:	3b438018877582959d1d0362c04cffa2
 Source1:	%{name}.desktop
 URL:		http://opencircuitdesign.com/xcircuit/
 BuildRequires:	autoconf
@@ -16,7 +16,7 @@ BuildRequires:	automake
 BuildRequires:	tk-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _xcircuitdir    %{_libdir}/%{name}-3.4
+%define         _xcircuitdir    %{_libdir}/%{name}-3.6
 
 %description
 XCircuit is a UNIX/X11 program for drawing publishable-quality
@@ -77,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_xcircuitdir}
 %attr(755,root,root) %{_xcircuitdir}/*.so
 %attr(755,root,root) %{_xcircuitdir}/*.tcl
+%{_xcircuitdir}/*.cir
 %{_xcircuitdir}/*.lps
 #%{_xcircuitdir}/*.script
 %{_xcircuitdir}/*.pro
@@ -88,7 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_xcircuitdir}/pixmaps
 %{_xcircuitdir}/pixmaps/*.gif
 %{_xcircuitdir}/pixmaps/*.ico
-%{_xcircuitdir}/pixmaps/*.xpm
 %{_xcircuitdir}/pixmaps/*.xbm
 %{_xcircuitdir}/xcircexec
 %{_pixmapsdir}/*
