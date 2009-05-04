@@ -1,15 +1,18 @@
 # TODO:
 # - Rs (X at least...)
 Summary:	Drawing electrical circuit schematic diagrams and related figure
+Summary(hu.UTF-8):	Elektromos áramkörök rajzolása
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
-Version:	3.6.145
+Version:	3.6.148
 Release:	0.1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	05af67b83925ad8f0bace213044342c9
+# Source0-md5:	7cf1e577d99d31364200779b7bc06de0
 Source1:	%{name}.desktop
+Source2:	http://opencircuitdesign.com/xcircuit/archive/tutorial.tar.gz
+# Source2-md5:	16aaa9c90b0cc83f69c1837365817fe4
 URL:		http://opencircuitdesign.com/xcircuit/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -29,6 +32,13 @@ XCircuit does not separate artistic expression from circuit drawing;
 it maintains flexiblity in style without compromising the power of
 schematic capture.
 
+%description -l hu.UTF-8
+XCircuit egy UNIX/X11 program nyomdai minőségű elemktromos áramkörök
+és hasonlók szedéséhe. Az XCircuit figyel a hierarchiára és a
+PostScript kimenetnél és a SPICE listánál is megtartja. Az áramköri
+komponensek könyvtárakba menti illetve tölti be, amelyek
+szerkesztehtőek.
+
 %description -l pl.UTF-8
 XCircuit to program dla systemu UNIX/X11 do rysowania w jakości
 nadającej się do publikacji różnych schematów elektronicznych i
@@ -40,6 +50,18 @@ odczytywane z bibliotek, które są w pełni modyfikowalne. XCircuit nie
 oddziela wyrażenia artystycznego od rysowania obwodów; zachowuje
 elastyczność w stylu bez kompromisów kosztem możliwości odczytu
 schematu.
+
+%package tutorial
+Summary:	Tutorial to XCircuit
+Summary(hu.UTF-8):	Tutorial az XCircuithoz
+Group:		Applications/Engineering
+Requires:	xcircuit = %{version}-%{release}
+
+%description tutorial
+Tutorial to XCircuit.
+
+%description tutorial -l hu.UTF-8
+Tutorial az XCircuithoz.
 
 %prep
 %setup -q
@@ -66,6 +88,11 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 install lib/pixmaps/%{name}.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+
+install -d $RPM_BUILD_ROOT%{_docdir}/xcircuit-tutorial
+tar xf %{SOURCE2} -C $RPM_BUILD_ROOT%{_docdir}/xcircuit-tutorial
+
+rm -rf $RPM_BUILD_ROOT%{_libdir}/xcircuit-3.6/man
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -94,3 +121,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/*
 %{_mandir}/man1/*.1*
 %{_desktopdir}/%{name}.desktop
+
+%files tutorial
+%defattr(644,root,root,755)
+%doc %{_docdir}/%{name}-tutorial
