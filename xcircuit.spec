@@ -4,12 +4,12 @@ Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(hu.UTF-8):	Elektromos áramkörök rajzolása
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
-Version:	3.6.148
-Release:	0.1
+Version:	3.6.151
+Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	7cf1e577d99d31364200779b7bc06de0
+# Source0-md5:	ab6755444cd67ac851718d7c198b96b1
 Source1:	%{name}.desktop
 Source2:	http://opencircuitdesign.com/xcircuit/archive/tutorial.tar.gz
 # Source2-md5:	16aaa9c90b0cc83f69c1837365817fe4
@@ -17,6 +17,7 @@ URL:		http://opencircuitdesign.com/xcircuit/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	tk-devel
+BuildRequires:	xorg-lib-libXt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _xcircuitdir    %{_libdir}/%{name}-3.6
@@ -82,9 +83,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
+	DESTDIR=$RPM_BUILD_ROOT
 %{__make} install-man \
-	DESTDIR=$RPM_BUILD_ROOT \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install lib/pixmaps/%{name}.xpm $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
