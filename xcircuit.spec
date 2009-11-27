@@ -4,12 +4,12 @@ Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(hu.UTF-8):	Elektromos áramkörök rajzolása
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
-Version:	3.6.162
+Version:	3.7.4
 Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	fc563bcb7a3232c855f3d0c7c1eb516b
+# Source0-md5:	f9ed150c915daff0f1b4bc554aacfdb2
 Source1:	%{name}.desktop
 Source2:	http://opencircuitdesign.com/xcircuit/archive/tutorial.tar.gz
 # Source2-md5:	16aaa9c90b0cc83f69c1837365817fe4
@@ -20,7 +20,7 @@ BuildRequires:	tk-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _xcircuitdir    %{_libdir}/%{name}-3.6
+%define         _xcircuitdir    %{_libdir}/%{name}-3.7
 
 %description
 XCircuit is a UNIX/X11 program for drawing publishable-quality
