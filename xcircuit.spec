@@ -4,15 +4,17 @@ Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(hu.UTF-8):	Elektromos áramkörök rajzolása
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
-Version:	3.6.165
+Version:	3.8.37
 Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	f90891db67c27708af01ca5f043db6df
+# Source0-md5:	f61f304a6babf085eec55c73d3096d0e
 Source1:	%{name}.desktop
 Source2:	http://opencircuitdesign.com/xcircuit/archive/tutorial.tar.gz
 # Source2-md5:	16aaa9c90b0cc83f69c1837365817fe4
+Patch1:		%{name}-configure.in.patch
+Patch2:		%{name}-not-a-string-literal.patch
 URL:		http://opencircuitdesign.com/xcircuit/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -20,7 +22,7 @@ BuildRequires:	tk-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _xcircuitdir    %{_libdir}/%{name}-3.6
+%define         _xcircuitdir    %{_libdir}/%{name}-3.8
 
 %description
 XCircuit is a UNIX/X11 program for drawing publishable-quality
@@ -66,6 +68,8 @@ Tutorial az XCircuithoz.
 
 %prep
 %setup -q
+%patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}
@@ -93,7 +97,7 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install -d $RPM_BUILD_ROOT%{_docdir}/xcircuit-tutorial
 tar xf %{SOURCE2} -C $RPM_BUILD_ROOT%{_docdir}/xcircuit-tutorial
 
-rm -rf $RPM_BUILD_ROOT%{_libdir}/xcircuit-3.6/man
+rm -rf $RPM_BUILD_ROOT%{_xcircuitdir}/man
 
 %clean
 rm -rf $RPM_BUILD_ROOT
