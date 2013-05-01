@@ -4,17 +4,16 @@ Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(hu.UTF-8):	Elektromos áramkörök rajzolása
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
-Version:	3.8.37
+Version:	3.8.38
 Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	f61f304a6babf085eec55c73d3096d0e
+# Source0-md5:	e749beb96374c89f84535d3e4629de7b
 Source1:	%{name}.desktop
 Source2:	http://opencircuitdesign.com/xcircuit/archive/tutorial.tar.gz
 # Source2-md5:	16aaa9c90b0cc83f69c1837365817fe4
-Patch1:		%{name}-configure.in.patch
-Patch2:		%{name}-not-a-string-literal.patch
+Patch1:		%{name}-not-a-string-literal.patch
 URL:		http://opencircuitdesign.com/xcircuit/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -69,7 +68,6 @@ Tutorial az XCircuithoz.
 %prep
 %setup -q
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__aclocal}
