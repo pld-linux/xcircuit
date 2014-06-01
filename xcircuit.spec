@@ -5,7 +5,7 @@ Summary(hu.UTF-8):	Elektromos áramkörök rajzolása
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
 Version:	3.8.38
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
