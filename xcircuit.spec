@@ -4,12 +4,12 @@ Summary:	Drawing electrical circuit schematic diagrams and related figure
 Summary(hu.UTF-8):	Elektromos áramkörök rajzolása
 Summary(pl.UTF-8):	Rysowanie schematów elektronicznych i zbliżonych diagramów
 Name:		xcircuit
-Version:	3.8.38
-Release:	2
+Version:	3.8.82
+Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	http://opencircuitdesign.com/xcircuit/archive/%{name}-%{version}.tgz
-# Source0-md5:	e749beb96374c89f84535d3e4629de7b
+# Source0-md5:	c19dc0c6daaa07d04578ab45b5b62a4c
 Source1:	%{name}.desktop
 Source2:	http://opencircuitdesign.com/xcircuit/archive/tutorial.tar.gz
 # Source2-md5:	16aaa9c90b0cc83f69c1837365817fe4
